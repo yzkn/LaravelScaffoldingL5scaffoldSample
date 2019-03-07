@@ -44,3 +44,27 @@ config/app.phpに以下のサービスプロバイダ(Service Providers)を追�
 Laralib\L5scaffold\GeneratorsServiceProvider::class,
 
 ```
+
+3. l5scaffoldの修正
+
+vendor/laralib/l5scaffold/src/Commands/ScaffoldMakeCommand.phpの5行目を修正
+
+```php
+// use Illuminate\Console\AppNamespaceDetectorTrait;
+use Illuminate\Console\DetectsApplicationNamespace;
+```
+
+21行目を修正
+
+```php
+// use AppNamespaceDetectorTrait, MakerTrait;
+use DetectsApplicationNamespace, MakerTrait;
+```
+
+vendor/laralib/l5scaffold/src/Makes/MakeController.phpの13行目を修正
+
+```php
+// use AppNamespaceDetectorTrait, MakerTrait; // ←コメントアウト
+use DetectsApplicationNamespace, MakerTrait; // ←追加
+```
+
