@@ -29,3 +29,18 @@ $ php artisan make:auth
 $ php artisan migrate
 
 ```
+
+2. l5scaffoldのインストール
+
+以下のコマンドを実行する
+
+```powershell
+$ composer require 'laralib/l5scaffold' --dev
+```
+
+config/app.phpに以下のサービスプロバイダ(Service Providers)を追加する
+
+```php
+Laralib\L5scaffold\GeneratorsServiceProvider::class,
+
+```
