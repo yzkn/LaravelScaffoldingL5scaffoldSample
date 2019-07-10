@@ -115,3 +115,7 @@ Views created successfully.
 Dump-autoload...
 Route::resource("items","ItemController"); // Add this line in routes.php
 ```
+
+---
+
+Copyright (c) 2019 YA-androidapp(https://github.com/YA-androidapp) All rights reserved.
